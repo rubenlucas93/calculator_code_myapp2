@@ -1,0 +1,55 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="procedures_defnoreturn" id="1" x="53" y="-444">
+    <mutation></mutation>
+    <field name="NAME">abrir_pantalla2</field>
+    <statement name="STACK">
+      <block type="controls_openAnotherScreen" id="2" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="3">
+            <field name="TEXT">screen</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="4" x="53" y="-367">
+    <mutation></mutation>
+    <field name="NAME">abrir_pantalla1</field>
+    <statement name="STACK">
+      <block type="controls_openAnotherScreen" id="5" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="6">
+            <field name="TEXT">Screen2</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="7" x="55" y="-283">
+    <mutation component_type="Button" instance_name="Button4" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button4</field>
+    <statement name="DO">
+      <block type="procedures_callnoreturn" id="8">
+        <mutation name="abrir_pantalla2"></mutation>
+        <field name="PROCNAME">abrir_pantalla2</field>
+        <next>
+          <block type="controls_closeScreen" id="9"></block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="10" x="55" y="-178">
+    <mutation component_type="Button" instance_name="Button2" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button2</field>
+    <statement name="DO">
+      <block type="procedures_callnoreturn" id="11">
+        <mutation name="abrir_pantalla1"></mutation>
+        <field name="PROCNAME">abrir_pantalla1</field>
+        <next>
+          <block type="controls_closeScreen" id="12"></block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="150" language-version="20"></yacodeblocks>
+</xml>

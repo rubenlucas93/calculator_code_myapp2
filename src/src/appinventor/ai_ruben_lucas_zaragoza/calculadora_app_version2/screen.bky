@@ -1,0 +1,505 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="procedures_defnoreturn" id="1" x="14" y="8">
+    <mutation></mutation>
+    <field name="NAME">abrir_pantalla</field>
+    <statement name="STACK">
+      <block type="controls_openAnotherScreen" id="2" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="3">
+            <field name="TEXT">Screen1</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="4" x="11" y="109">
+    <mutation component_type="Button" instance_name="Button5" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button5</field>
+    <statement name="DO">
+      <block type="procedures_callnoreturn" id="5">
+        <mutation name="abrir_pantalla"></mutation>
+        <field name="PROCNAME">abrir_pantalla</field>
+        <next>
+          <block type="controls_closeScreen" id="6"></block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="7" x="8" y="222">
+    <mutation component_type="Button" instance_name="Button2" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button2</field>
+    <statement name="DO">
+      <block type="component_set_get" id="8" inline="false">
+        <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox4"></mutation>
+        <field name="COMPONENT_SELECTOR">TextBox4</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="math_add" id="9" inline="true">
+            <mutation items="2"></mutation>
+            <value name="NUM0">
+              <block type="component_set_get" id="10">
+                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox4"></mutation>
+                <field name="COMPONENT_SELECTOR">TextBox4</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="NUM1">
+              <block type="math_number" id="11">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="12" x="9" y="335">
+    <mutation component_type="Button" instance_name="Button4" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button4</field>
+    <statement name="DO">
+      <block type="component_set_get" id="13" inline="false">
+        <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox4"></mutation>
+        <field name="COMPONENT_SELECTOR">TextBox4</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="math_subtract" id="14" inline="true">
+            <value name="A">
+              <block type="component_set_get" id="15">
+                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox4"></mutation>
+                <field name="COMPONENT_SELECTOR">TextBox4</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="16">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="17" x="15" y="423">
+    <mutation component_type="Button" instance_name="Button3" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button3</field>
+    <statement name="DO">
+      <block type="controls_if" id="18" inline="false">
+        <mutation elseif="2" else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_operation" id="19" inline="true">
+            <field name="OP">AND</field>
+            <value name="A">
+              <block type="logic_compare" id="20" inline="true">
+                <field name="OP">NEQ</field>
+                <value name="A">
+                  <block type="component_set_get" id="21">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                    <field name="COMPONENT_SELECTOR">TextBox1</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="22">
+                    <field name="TEXT"></field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_operation" id="23" inline="true">
+                <field name="OP">AND</field>
+                <value name="A">
+                  <block type="logic_compare" id="24" inline="true">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="component_set_get" id="25">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox2"></mutation>
+                        <field name="COMPONENT_SELECTOR">TextBox2</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="26">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_compare" id="27" inline="true">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="component_set_get" id="28">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox3"></mutation>
+                        <field name="COMPONENT_SELECTOR">TextBox3</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="29">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_set_get" id="30" inline="false">
+            <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox3"></mutation>
+            <field name="COMPONENT_SELECTOR">TextBox3</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="math_multiply" id="31" inline="true">
+                <mutation items="2"></mutation>
+                <value name="NUM0">
+                  <block type="component_set_get" id="32">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                    <field name="COMPONENT_SELECTOR">TextBox1</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+                <value name="NUM1">
+                  <block type="component_set_get" id="33">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox4"></mutation>
+                    <field name="COMPONENT_SELECTOR">TextBox4</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="34" inline="false">
+                <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox2"></mutation>
+                <field name="COMPONENT_SELECTOR">TextBox2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="math_subtract" id="35" inline="true">
+                    <value name="A">
+                      <block type="math_power" id="36" inline="true">
+                        <value name="A">
+                          <block type="math_add" id="37" inline="true">
+                            <mutation items="2"></mutation>
+                            <value name="NUM0">
+                              <block type="component_set_get" id="38">
+                                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                                <field name="COMPONENT_SELECTOR">TextBox1</field>
+                                <field name="PROP">Text</field>
+                              </block>
+                            </value>
+                            <value name="NUM1">
+                              <block type="math_number" id="39">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="component_set_get" id="40">
+                            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox4"></mutation>
+                            <field name="COMPONENT_SELECTOR">TextBox4</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="41">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_operation" id="42" inline="true">
+            <field name="OP">AND</field>
+            <value name="A">
+              <block type="logic_compare" id="43" inline="true">
+                <field name="OP">NEQ</field>
+                <value name="A">
+                  <block type="component_set_get" id="44">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox2"></mutation>
+                    <field name="COMPONENT_SELECTOR">TextBox2</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="45">
+                    <field name="TEXT"></field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_operation" id="46" inline="true">
+                <field name="OP">AND</field>
+                <value name="A">
+                  <block type="logic_compare" id="47" inline="true">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="component_set_get" id="48">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                        <field name="COMPONENT_SELECTOR">TextBox1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="49">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_compare" id="50" inline="true">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="component_set_get" id="51">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox3"></mutation>
+                        <field name="COMPONENT_SELECTOR">TextBox3</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="52">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="component_set_get" id="53" inline="false">
+            <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+            <field name="COMPONENT_SELECTOR">TextBox1</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="math_subtract" id="54" inline="true">
+                <value name="A">
+                  <block type="math_power" id="55" inline="true">
+                    <value name="A">
+                      <block type="math_add" id="56" inline="true">
+                        <mutation items="2"></mutation>
+                        <value name="NUM0">
+                          <block type="component_set_get" id="57">
+                            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox2"></mutation>
+                            <field name="COMPONENT_SELECTOR">TextBox2</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                        <value name="NUM1">
+                          <block type="math_number" id="58">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_division" id="59" inline="true">
+                        <value name="A">
+                          <block type="math_number" id="60">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="component_set_get" id="61">
+                            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox4"></mutation>
+                            <field name="COMPONENT_SELECTOR">TextBox4</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="62">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="63" inline="false">
+                <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox3"></mutation>
+                <field name="COMPONENT_SELECTOR">TextBox3</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="math_multiply" id="64" inline="true">
+                    <mutation items="2"></mutation>
+                    <value name="NUM0">
+                      <block type="component_set_get" id="65">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                        <field name="COMPONENT_SELECTOR">TextBox1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="NUM1">
+                      <block type="component_set_get" id="66">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox4"></mutation>
+                        <field name="COMPONENT_SELECTOR">TextBox4</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF2">
+          <block type="logic_operation" id="67" inline="true">
+            <field name="OP">AND</field>
+            <value name="A">
+              <block type="logic_compare" id="68" inline="true">
+                <field name="OP">NEQ</field>
+                <value name="A">
+                  <block type="component_set_get" id="69">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox3"></mutation>
+                    <field name="COMPONENT_SELECTOR">TextBox3</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="70">
+                    <field name="TEXT"></field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_operation" id="71" inline="true">
+                <field name="OP">AND</field>
+                <value name="A">
+                  <block type="logic_compare" id="72" inline="true">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="component_set_get" id="73">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                        <field name="COMPONENT_SELECTOR">TextBox1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="74">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_compare" id="75" inline="true">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="component_set_get" id="76">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                        <field name="COMPONENT_SELECTOR">TextBox1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="77">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO2">
+          <block type="component_set_get" id="78" inline="false">
+            <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+            <field name="COMPONENT_SELECTOR">TextBox1</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="math_division" id="79" inline="true">
+                <value name="A">
+                  <block type="component_set_get" id="80">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox3"></mutation>
+                    <field name="COMPONENT_SELECTOR">TextBox3</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="component_set_get" id="81">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox4"></mutation>
+                    <field name="COMPONENT_SELECTOR">TextBox4</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="82" inline="false">
+                <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox2"></mutation>
+                <field name="COMPONENT_SELECTOR">TextBox2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="math_subtract" id="83" inline="true">
+                    <value name="A">
+                      <block type="math_power" id="84" inline="true">
+                        <value name="A">
+                          <block type="math_add" id="85" inline="true">
+                            <mutation items="2"></mutation>
+                            <value name="NUM0">
+                              <block type="component_set_get" id="86">
+                                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                                <field name="COMPONENT_SELECTOR">TextBox1</field>
+                                <field name="PROP">Text</field>
+                              </block>
+                            </value>
+                            <value name="NUM1">
+                              <block type="math_number" id="87">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="component_set_get" id="88">
+                            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox4"></mutation>
+                            <field name="COMPONENT_SELECTOR">TextBox4</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="89">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="component_method" id="90" inline="false">
+            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text" id="91">
+                <field name="TEXT">deje únicamente 2 campos en blanco</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="150" language-version="20"></yacodeblocks>
+</xml>
